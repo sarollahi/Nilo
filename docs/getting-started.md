@@ -55,7 +55,7 @@ python3.12 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-`main/nilo-server/requirements.txt` pins the runtime: torch/torchaudio 2.2.2 (for FunASR),
+`main/nilo-server/requirements.txt` pins the runtime: torch/torchaudio 2.6.0 (for FunASR),
 `websockets==14.2`, the provider SDKs, `mcp`, `aiohttp`, `loguru`. One entry is conditional:
 
 ```

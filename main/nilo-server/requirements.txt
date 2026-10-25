@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
-# Pinned together: torch/torchaudio 2.2.2 (funasr); numpy left to the resolver so 3.10-3.12 all solve.
-torch==2.2.2
-torchaudio==2.2.2
+# Pinned together: torch/torchaudio 2.6.0 (security fixes, including CVE-2025-32434); numpy stays resolver-managed.
+torch==2.6.0
+torchaudio==2.6.0
 numpy
 # cozepy 0.20.0 requires websockets<15
 websockets==14.2
