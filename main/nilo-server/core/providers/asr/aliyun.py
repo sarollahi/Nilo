@@ -69,13 +69,13 @@ class AccessToken:
         signature = AccessToken._encode_text(signature)
         # print('URL-encoded signature: %s' % signature)
         # Call the service
-        full_url = "http://nls-meta.cn-shanghai.aliyuncs.com/?Signature=%s&%s" % (
+        full_url = "https://nls-meta.cn-shanghai.aliyuncs.com/?Signature=%s&%s" % (
             signature,
             query_string,
         )
         # print('url: %s' % full_url)
         # Send the HTTP GET request
-        response = requests.get(full_url)
+        response = requests.get(full_url, timeout=10)
         if response.ok:
             root_obj = response.json()
             key = "Token"
