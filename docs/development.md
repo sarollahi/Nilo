@@ -64,7 +64,7 @@ There are two dependency tiers, and which one you need depends on what you are d
 | File | Size | Installs | Enough for |
 |---|---|---|---|
 | `requirements-dev.txt` | 10 pins | pytest, pytest-asyncio, freezegun, ruff, mypy, plus PyYAML, httpx, cnlunar, pydantic, loguru | `make lint`, `make typecheck`, and most of `make test` |
-| `requirements.txt` | 39 pins | The full runtime: torch/torchaudio 2.2.2, funasr, modelscope, silero_vad, opuslib_next, aiohttp, websockets, openai, mcp, … | Running the server, and the tests that touch aiohttp/websockets/numpy |
+| `requirements.txt` | 39 pins | The full runtime: torch/torchaudio 2.6.0, funasr, modelscope, silero_vad, opuslib_next, aiohttp, websockets, openai, mcp, … | Running the server, and the tests that touch aiohttp/websockets/numpy |
 
 ```bash
 pip install -r requirements-dev.txt                      # fast slice: lint, types, most tests

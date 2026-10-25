@@ -352,7 +352,7 @@ for the console sink, or mount a volume over `/opt/nilo-server/tmp` if you want 
 
 | Fact | Source |
 |---|---|
-| `requirements.txt` pins `torch==2.2.2` and `torchaudio==2.2.2` (for `funasr==1.2.7`), so the base image and the virtualenv are large regardless of which ASR you select | `main/nilo-server/requirements.txt`, `Dockerfile-server-base` |
+| `requirements.txt` pins `torch==2.6.0` and `torchaudio==2.6.0` (for `funasr==1.2.7`), so the base image and the virtualenv are large regardless of which ASR you select | `main/nilo-server/requirements.txt`, `Dockerfile-server-base` |
 | The local FunASR provider logs an error when total system memory is under 2 GB | `core/providers/asr/fun_local.py` |
 | The FunASR weights (`models/SenseVoiceSmall/model.pt`) are neither committed nor in the image | `.gitignore`, `docker-compose.yml` mount |
 | A GC pass runs every 300 seconds | `app.py` → `core/utils/gc_manager.py` |
