@@ -68,7 +68,7 @@ class AccessToken:
         signature = base64.b64encode(secreted_string)
         signature = AccessToken._encode_text(signature)
 
-        full_url = "http://nls-meta.cn-shanghai.aliyuncs.com/?Signature=%s&%s" % (
+        full_url = "https://nls-meta.cn-shanghai.aliyuncs.com/?Signature=%s&%s" % (
             signature,
             query_string,
         )

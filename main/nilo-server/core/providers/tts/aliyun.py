@@ -67,7 +67,7 @@ class AccessToken:
         signature = AccessToken._encode_text(signature)
         # print('URL-encoded signature: %s' % signature)
         # Call the service
-        full_url = "http://nls-meta.cn-shanghai.aliyuncs.com/?Signature=%s&%s" % (
+        full_url = "https://nls-meta.cn-shanghai.aliyuncs.com/?Signature=%s&%s" % (
             signature,
             query_string,
         )

@@ -49,7 +49,7 @@ async def search_from_ragflow(conn: "ConnectionHandler", question=None):
 
     try:
         # ensure_ascii=False keeps non-ASCII text intact during JSON serialization
-        async with httpx.AsyncClient(timeout=httpx.Timeout(5.0, connect=3.0), verify=False) as client:
+        async with httpx.AsyncClient(timeout=httpx.Timeout(5.0, connect=3.0)) as client:
             response = await client.post(url, json=payload, headers=headers)
 
         # Explicitly set the response encoding to utf-8

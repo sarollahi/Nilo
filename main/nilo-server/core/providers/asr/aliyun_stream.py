@@ -58,8 +58,8 @@ class AccessToken:
         ).digest()
         signature = base64.b64encode(secreted_string)
         signature = AccessToken._encode_text(signature)
-        full_url = "http://nls-meta.cn-shanghai.aliyuncs.com/?Signature=%s&%s" % (signature, query_string)
-        response = requests.get(full_url)
+        full_url = "https://nls-meta.cn-shanghai.aliyuncs.com/?Signature=%s&%s" % (signature, query_string)
+        response = requests.get(full_url, timeout=10)
         if response.ok:
             root_obj = response.json()
             if "Token" in root_obj:
