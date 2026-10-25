@@ -37,10 +37,7 @@ class ASRProvider(ASRProviderBase):
             if self.is_ssl
             else f"ws://{self.host}:{self.port}"
         )
-        self.ssl_context = ssl.SSLContext() if self.is_ssl else None
-        if self.ssl_context:
-            self.ssl_context.check_hostname = False
-            self.ssl_context.verify_mode = ssl.CERT_NONE
+        self.ssl_context = ssl.create_default_context() if self.is_ssl else None
 
     async def _receive_responses(self, ws) -> None:
         """
